@@ -16,7 +16,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      margin-top: 100px;
       background: var(--clr);
 }
 
@@ -126,4 +126,92 @@ body {
 }
 .navigation ul li:nth-child(5).active ~ .indicator {
     transform: translateX(calc(70px * 4));
+}
+
+/*Bouton new generation*/
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-right: 50px;
+    padding: 10px 30px;
+}
+.nextBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+}
+.newBtn {
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+.newBtn:hover {
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+
+.newBtn::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #222327;
+}
+
+.newBtn span {
+    position: relative;
+    z-index: 1;
+}
+
+.newBtn i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+.newBtn i::before {
+    content: "";
+    position: absolute;
+    top: -3.5px;
+    left: 88%;
+    height: 5px;
+    width: 10px;
+    border: 2px solid var(--clr);
+    background: #222327;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.newBtn:hover i::before {
+    width: 20px;
+    left: 20%;
+}
+.newBtn i::after {
+    content: "";
+    position: absolute;
+    bottom: -3.5px;
+    left: 20%;
+    height: 5px;
+    width: 10px;
+    border: 2px solid var(--clr);
+    background: #222327;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.newBtn:hover i::after {
+    width: 20px;
+    left: 80%;
 }
